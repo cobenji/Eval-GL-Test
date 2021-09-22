@@ -13,6 +13,15 @@ final class romanTest extends TestCase
 
     }
 
+    public function testIsRomanToDecimal()
+    {
+        $this->assertEquals(1, Roman::romanToDecimal('I'));
+        $this->assertEquals(5, Roman::romanToDecimal('V'));
+        $this->assertEquals(9, Roman::romanToDecimal('IX'));
+        $this->assertEquals(20, Roman::romanToDecimal('XX'));
+
+    }
+
 
     // public function testNonDecimalToRoman()
     // {
