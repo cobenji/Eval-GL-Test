@@ -3,9 +3,12 @@
 
 final class Roman{
 
-    public static function decimalToRoman(string $text)
+    public static function decimalToRoman(int $number)
     {
-       
+        if($number == 1)
+        {
+            return 'I';
+        }
 
     }
     
