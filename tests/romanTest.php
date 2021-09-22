@@ -10,6 +10,7 @@ final class romanTest extends TestCase
         $this->assertEquals('V', Roman::decimalToRoman(5));
         $this->assertEquals('IX', Roman::decimalToRoman(9));
         $this->assertEquals('XX', Roman::decimalToRoman(20));
+        $this->assertEquals('XXXIII', Roman::decimalToRoman(33));
 
     }
 

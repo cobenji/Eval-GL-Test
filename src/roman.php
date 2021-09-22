@@ -3,7 +3,7 @@
 
 final class Roman{
 
-    public static $romanArray = array(
+    protected static $romanArray = array(
         'M' => 1000,
         'CM' => 900,
         'D' => 500,
@@ -30,7 +30,7 @@ final class Roman{
 
         foreach(self::$romanArray as $roman => $value)
         {
-            $matches = intval($number/$value);              
+            $matches = intval($number/$value);
             $result .= str_repeat($roman,$matches);
             $number = $number % $value;
         }
@@ -47,7 +47,7 @@ final class Roman{
                 $roman = substr($roman, strlen($key));
             }
         }
-        
+
         if($result > 3000)
         {
             return false;
