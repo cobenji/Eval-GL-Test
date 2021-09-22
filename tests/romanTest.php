@@ -22,9 +22,14 @@ final class romanTest extends TestCase
 
     }
 
+    public function testIsNotDecimalToRoman()
+    {
+        $this->assertEquals(false, Roman::decimalToRoman(3008),'Supérieur à 3000');
+    }
 
-    // public function testNonDecimalToRoman()
-    // {
+    public function testIsNotRomanToDecimal()
+    {
+        $this->assertEquals(false, Roman::romanToDecimal('MMMVII'),'Supérieur à 3000');
+    }
 
-    // }
 }
